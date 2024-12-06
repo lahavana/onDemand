@@ -7,7 +7,7 @@ write-host 'AIB Customization: Install Citrix VDA without WorkspaceApp'
  set-Location "$LocalPath"
  write-host "AIB Customization: The current path is $LocalPath"
 
-$osOptURL = 'https://wbgcitrixinfraeawapps.blob.core.windows.net/baseline/VDAServerSetup_2203_CU3.exe'
+$osOptURL = 'https://wbgcitrixinfraeawapps.blob.core.windows.net/baseline/VDAServerSetup_2402_1100.exe'
  $osOptURLexe = 'VDAServerSetup.exe'
  $outputPath = $LocalPath + '\' + $osOptURLexe
 
