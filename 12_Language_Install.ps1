@@ -11,7 +11,7 @@ reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Control Panel\Internatio
 $LIPContent = "C:\install\language\LanguagesAndOptionalFeatures"
 
 ##Set Path of CSV File##
-$CSVFile = "Windows-10-1809-FOD-to-LP-Mapping-Table.csv"
+$CSVFile = "Windows-10-1809-FOD-to-LP-Mapping-Table.xlsx"
 $filePath = $LIPContent + "/$CSVFile"
 
 ##Import Necesarry CSV File##
