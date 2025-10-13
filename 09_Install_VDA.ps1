@@ -7,7 +7,7 @@ write-host 'AIB Customization: Install Citrix VDA without WorkspaceApp'
  set-Location "$LocalPath"
  write-host "AIB Customization: The current path is $LocalPath"
 
-$osOptURL = 'https://wbgcitrixinfraeawapps.blob.core.windows.net/baseline/VDAServerSetup_2402_1100.exe'
+$osOptURL = 'https://wbgcitrixinfraeawapps.blob.core.windows.net/baseline/VDAServerSetup_2507.exe'
  $osOptURLexe = 'VDAServerSetup.exe'
  $outputPath = $LocalPath + '\' + $osOptURLexe
 
@@ -28,6 +28,21 @@ start-sleep 5
 #write-host ""Test-File ".\Extract\Image-Full\Support\DotNet48\ndp48-x86-x64-allos-enu.exe"""
 #Test-Path ".\Extract\Image-Full\Support\DotNet48\ndp48-x86-x64-allos-enu.exe"
 #& .\VDAServerSetup.exe /components vda /disableexperiencemetrics /enable_hdx_ports /enable_hdx_udp_ports /enable_real_time_transport /enable_remote_assistance /enable_ss_ports /includeadditional "Citrix Profile Management","Citrix Profile Management WMI Plug-in" /exclude "Citrix Personalization for App-V - VDA","Citrix Supportability Tools","Citrix WEM Agent","Citrix MCS IODriver","Citrix VDA Upgrade Agent" /mastermcsimage /noreboot /virtualmachine
-& .\VDAServerSetup.exe /components vda /enable_hdx_ports /enable_hdx_udp_ports /enable_real_time_transport /enable_remote_assistance /enable_ss_ports /includeadditional "Citrix Profile Management","Citrix Profile Management WMI Plug-in","Citrix Rendezvous V2","Citrix MCS IODriver" /exclude "Citrix Personalization for App-V - VDA","Citrix Supportability Tools","Citrix MCS IODriver","Citrix VDA Upgrade Agent" /mastermcsimage /noreboot /quiet /virtualmachine /xendesktopcloud
+#& .\VDAServerSetup.exe /components vda /enable_hdx_ports /enable_hdx_udp_ports /enable_real_time_transport /enable_remote_assistance /enable_ss_ports /includeadditional "Citrix Profile Management","Citrix Profile Management WMI Plug-in","Citrix Rendezvous V2","Citrix MCS IODriver" /exclude "Citrix Personalization for App-V - VDA","Citrix Supportability Tools","Citrix MCS IODriver","Citrix VDA Upgrade Agent" /mastermcsimage /noreboot /quiet /virtualmachine /xendesktopcloud
+
+& ".\VDAServerSetup.exe" `
+  /components vda `
+  /enable_hdx_ports `
+  /enable_hdx_udp_ports `
+  /enable_real_time_transport `
+  /enable_remote_assistance `
+  /enable_ss_ports `
+  /includeadditional "Citrix Profile Management","Citrix Profile Management WMI Plug-in","Citrix Rendezvous V2","Citrix MCS IODriver" `
+  /exclude "Citrix Supportability Tools","Citrix VDA Upgrade Agent" `
+  /mastermcsimage `
+  /xendesktopcloud `
+  /quiet `
+  /noreboot
 
 write-host 'AIB Customization: Finished Install of Citrix VDA'
+
