@@ -18,7 +18,7 @@ $filePath = $LIPContent + "/$CSVFile"
 $FODList = Import-Csv -Path $filePath -Delimiter ";"
 
 ##Set Language (Target)##
-$targetLanguageAll = "de-de"    #,"fr-fr","nl-nl","hu-hu","pl-pl","cs-cz","ru-ru","sk-sk"
+$targetLanguageAll = "de-de","fr-fr","nl-nl","hu-hu","pl-pl","cs-cz","ru-ru","sk-sk"
 
 foreach ($targetLanguage in $targetLanguageAll)
     {
