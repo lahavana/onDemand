@@ -21,5 +21,5 @@
 
 
  #Run Citrix Optimize
- .\CtxOptimizerEngine.ps1 "$Template\\Templates\Citrix_Windows_Server_2019_1809.xml" -Mode Execute
+ .\CtxOptimizerEngine.ps1 "$Template\\Templates\Citrix_Windows_11_2009.xml" -Mode Execute
  write-host 'AIB Customization: Finished OS Optimizations for WVD with Citrix Optimizer'
